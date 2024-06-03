@@ -6,7 +6,7 @@ This tool is meant for educational/pentest exercise by authorized person(s) only
       
 The developer of this tool will NOT be held liable in case of any misuse of this tool!
 
-SETUP:
+\nSETUP:
 	Unix: 
  		$ python3 -m pip install -r requirements.txt
 	Windows: 
