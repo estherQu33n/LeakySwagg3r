@@ -5,7 +5,6 @@ This tool is meant for educational/pentest exercise by authorized person(s) only
 ***As such, only use this tool if you are legally authorized to test a target***
       
 The developer of this tool will NOT be held liable in case of any misuse of this tool!
-![swagger_0](https://github.com/3sth3rN00n/LeakySwagg3r/assets/171611980/a2ddf8c1-0318-49be-b92d-7ec2c2f416a7)
 
 
 SETUP:
@@ -31,3 +30,6 @@ USAGE:
 EXAMPLE: 
 
 	$ python3 leakySwagg3r.py https://localhost/swagger.json
+
+![swagger_0](https://github.com/3sth3rN00n/LeakySwagg3r/assets/171611980/6413f8d5-3674-4093-a880-045df328054c)
+
