@@ -8,7 +8,7 @@ The developer of this tool will NOT be held liable in case of any misuse of this
 
 SETUP:
 
-	Unix: 
+	Linux: 
  
  		$ python3 -m pip install -r requirements.txt
    
@@ -18,7 +18,7 @@ SETUP:
 
 USAGE:
 
-	Unix: 
+	Linux: 
  
 		$ python3 leakySwagg3r.py <endpoint_containing_swagger_json_schema>
   
