@@ -1,6 +1,5 @@
 # LeakySwagg3r
 # Warning:
------------------------------------------------------------------------------------------------------
 ***This tool is meant for educational/pentest exercise by authorized person(s) only!
 As such, only use this tool if you are legally authorized to test a target***
       
