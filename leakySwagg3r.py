@@ -17,8 +17,8 @@ print(Fore.GREEN +
       '******************************************************************************************' + Style.RESET_ALL)
 
 print(Fore.CYAN + 'Usage:\n\t python3 leakySwagg3r.py <endpoint_containing_swagger_json_schema>\n'
-      'Example:\n\t python3 leakySwagg3r.py https://localhost/swagger.json\n'
-      '\t python3 leakySwagg3r.py https://localhost/API/swagger/docs/v1\n'
+      'Example:\n\t python3 leakySwagg3r.py https://authorizedtarget.io/swagger.json\n'
+      '\t python3 leakySwagg3r.py https://mypentesttarget.com/API/swagger/docs/v1\n'
       + Style.RESET_ALL + Fore.GREEN +
       '******************************************************************************************\n'+ Style.RESET_ALL
       )
