@@ -39,4 +39,5 @@ EXAMPLE:
 	$ python3 leakySwagg3r.py https://devops.target.io/docs/?format=json
 
 
-![swagger_0](https://github.com/3sth3rN00n/LeakySwagg3r/assets/171611980/6413f8d5-3674-4093-a880-045df328054c)
+![swagger](https://github.com/3sth3rN00n/LeakySwagg3r/assets/171611980/85eab9e6-34bc-4eca-8cef-e278b672735c)
+
