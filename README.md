@@ -1,5 +1,4 @@
 # LeakySwagg3r
-=======
 # Warning:
 -----------------------------------------------------------------------------------------------------
 ***This tool is meant for educational/pentest exercise by authorized person(s) only!
