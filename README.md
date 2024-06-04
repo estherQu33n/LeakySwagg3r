@@ -5,7 +5,7 @@ As such, only use this tool if you are legally authorized to test a target***
 
 ***[Reminder]:***
 
-***Before running the script, It is advisable to modify the allowed methods within the script first! i.e You may want to remove DELETE when testing production environments***
+***Before running the script, it is advisable to modify the allowed methods within the script first! i.e You may want to remove DELETE when testing production environments***
 
 # The developer of this tool will NOT be held liable in case of any misuse of this tool!
 ------------------------------------------------------------------------------------------------------
