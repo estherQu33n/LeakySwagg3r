@@ -97,7 +97,7 @@ def open_endpoints_scrapper():
                                                 if unauthorized:
                                                     pass
                                                 else:
-                                                    print(Fore.CYAN + 'Potentially Unauthenticated:' + Style.RESET_ALL +
+                                                    print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL +
                                                           Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
                                                           'curl ' + '-X', method.upper(), Fore.YELLOW + url +
                                                           path_without_curly + '?' +
@@ -141,7 +141,7 @@ def open_endpoints_scrapper():
                                                             if unauthorized:
                                                                 pass
                                                             else:
-                                                                print(Fore.CYAN + 'Potentially Unauthenticated:' + Style.RESET_ALL +
+                                                                print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL +
                                                                       Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
                                                                       'curl','-X', method.upper(), url + Fore.YELLOW+
                                                                       path_without_curly + '?' +
@@ -176,7 +176,7 @@ def open_endpoints_scrapper():
                                     if unauthorized:
                                         pass
                                     else:
-                                        print(Fore.CYAN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
+                                        print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
                                               Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
                                               'curl -X', method.upper(), Fore.YELLOW+ url +
                                               path_without_curly + '?' +
@@ -199,7 +199,7 @@ def open_endpoints_scrapper():
                                     if unauthorized:
                                         pass
                                     else:
-                                        print(Fore.CYAN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
+                                        print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
                                               Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
                                               'curl -X', method.upper(), Fore.YELLOW+ url + path_without_curly + '?' +
                                               '&'.join(rams).replace("integer", "1").replace("boolean", "True")+
@@ -215,7 +215,7 @@ def open_endpoints_scrapper():
                                 if unauthorized:
                                     pass
                                 else:
-                                    print(Fore.CYAN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
+                                    print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
                                           Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
                                           'curl -X', method.upper(), Fore.YELLOW+ url + path_without_curly + Style.RESET_ALL
                                           )
@@ -242,7 +242,7 @@ def open_endpoints_scrapper():
                                                 if unauthorized:
                                                     pass
                                                 else:
-                                                    print(Fore.CYAN + 'Potentially Unauthenticated:', Style.RESET_ALL,
+                                                    print(Fore.GREEN + 'Potentially Unauthenticated:', Style.RESET_ALL,
                                                           Fore.RED, response.status_code, Style.RESET_ALL,
                                                           '\n', 'curl ' + '-X', method.upper(),
                                                           Fore.YELLOW+ url + path_without_curly + Style.RESET_ALL,
@@ -286,7 +286,7 @@ def open_endpoints_scrapper():
                                                                 if unauthorized:
                                                                     pass
                                                                 else:
-                                                                    print(Fore.CYAN + 'Potentially Unauthenticated:',
+                                                                    print(Fore.GREEN + 'Potentially Unauthenticated:',
                                                                           Style.RESET_ALL,
                                                                           Fore.RED, response.status_code,
                                                                           Style.RESET_ALL, '\n',
@@ -311,7 +311,7 @@ def open_endpoints_scrapper():
                                                                 if unauthorized:
                                                                     pass
                                                                 else:
-                                                                    print(Fore.CYAN + 'Potentially Unauthenticated:',
+                                                                    print(Fore.GREEN + 'Potentially Unauthenticated:',
                                                                           Style.RESET_ALL,
                                                                           Fore.RED, response.status_code,
                                                                           Style.RESET_ALL, '\n',
@@ -343,7 +343,7 @@ def open_endpoints_scrapper():
                             if unauthorized:
                                 pass
                             else:
-                                print(Fore.CYAN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
+                                print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
                                       Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
                                       'curl ' + '-X ' + method.upper(),
                                       Fore.YELLOW + url + path_without_curly + Style.RESET_ALL
