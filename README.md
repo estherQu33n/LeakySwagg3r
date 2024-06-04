@@ -34,9 +34,9 @@ P/S: ***The specified endpoint must contain the Swagger schema in json format***
 
 EXAMPLE: 
 
-	$ python3 leakySwagg3r.py https://localhost/swagger.json
- 	$ python3 leakySwagg3r.py https://mypentesttarget.com/API/swagger/docs/v1
-	$ python3 leakySwagg3r.py https://devops.target.io/docs/?format=openai
+	$ python3 leakySwagg3r.py https://localhost/openapi.json
+ 	$ python3 leakySwagg3r.py https://mypentesttarget.com/API/swagger.json
+	$ python3 leakySwagg3r.py https://devops.target.io/docs/?format=json
 
 
 ![swagger_0](https://github.com/3sth3rN00n/LeakySwagg3r/assets/171611980/6413f8d5-3674-4093-a880-045df328054c)
