@@ -1,8 +1,7 @@
 # LeakySwagg3r : ***Your Swagger API Pentest Tool***
 # Warning:
 ***This tool is meant for educational/pentest exercise by authorized person(s) only!
-As such, only use this tool if you are legally authorized to test a target***
-      
+As such, only use this tool if you are legally authorized to test a target***     
 The developer of this tool will NOT be held liable in case of any misuse of this tool!
 ------------------------------------------------------------------------------------------------------
 
