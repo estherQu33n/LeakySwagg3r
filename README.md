@@ -31,9 +31,11 @@ USAGE:
  
 		$ py leakySwagg3r.py <endpoint_containing_swagger_json_schema>
 
-EXAMPLE: 
+EXAMPLE: {The specified endpoint must contain the Swagger schema in json format}
 
 	$ python3 leakySwagg3r.py https://localhost/swagger.json
+ 	$ python3 leakySwagg3r.py https://localhost/API/swagger/docs/v1
+	$ python3 leakySwagg3r.py https://localhost/docs/?format=openai
 
-=======
+
 ![swagger_0](https://github.com/3sth3rN00n/LeakySwagg3r/assets/171611980/6413f8d5-3674-4093-a880-045df328054c)
