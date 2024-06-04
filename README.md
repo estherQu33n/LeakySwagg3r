@@ -1,8 +1,8 @@
 # LeakySwagg3r
 A Python tool to find misconfigured/unauthenticated Swagger API endpoints
 
-This tool is meant for educational/pentest exercise by authorized person(s) only!
-***As such, only use this tool if you are legally authorized to test a target***
+***This tool is meant for educational/pentest exercise by authorized person(s) only!
+As such, only use this tool if you are legally authorized to test a target***
       
 The developer of this tool will NOT be held liable in case of any misuse of this tool!
 
@@ -29,3 +29,8 @@ USAGE:
 EXAMPLE: 
 
 	$ python3 leakySwagg3r.py https://localhost/swagger.json
+
+
+***[Warning]:***
+
+***Before running the script, you may want to modify the allowed methods first eg you may want to remove DELETE when testing production environments***

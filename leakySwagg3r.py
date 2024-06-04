@@ -8,12 +8,13 @@ from ratelimit import limits, sleep_and_retry
 
 endpoint = sys.argv[1]
 
-print(Fore.GREEN + '******************************************************************************************\n'
+print(Fore.GREEN +
+      '******************************************************************************************\n'
       'Dear User, Thank you for using LeakySwagg3r ...\n'
       'This tool is meant for educational/pentest exercise by authorized person(s) only!\n'+
-      '>>>>>***As such, only use this tool if you are legally authorized to test a target***<<<<<\n'.upper()+
+      '***As such, only use this tool if you are legally authorized to test a target***\n'.upper()+
       'The developer of this tool will NOT be held liable in case of any misuse of this tool!\n'
-      '******************************************************************************************' + Style.RESET_ALL)
+      '******************************************************************************************\n' + Style.RESET_ALL)
 
 print(Fore.CYAN + 'Usage:\n\t python3 leakySwagg3r.py <endpoint_containing_swagger_json_schema>\n'
       'Example:\n\t python3 leakySwagg3r.py https://localhost/swagger.json\n'
@@ -61,7 +62,6 @@ def open_endpoints_scrapper():
             @sleep_and_retry
             @limits(calls=1, period=30)
             def all_other_endpoints():
-
                 # Handle endpoints containing both parameters and a request body
                 if 'parameters' in num_of_requests and 'requestBody' in num_of_requests:
                     # Handle parameter(s)
@@ -157,7 +157,7 @@ def open_endpoints_scrapper():
                     parameters = data['paths'][path][method]['parameters']
 
                     if len(parameters) > 0:
-                        # If 'schema' in 'parameters'
+                        # if 'schema' in 'parameters'
                         if 'schema' in parameters[0]:
                             params = [d['name'] + '=' + str(parameters[0]['schema']['$ref']) if '$ref' in
                                       parameters[0]['schema'] else
@@ -185,10 +185,10 @@ def open_endpoints_scrapper():
                                               )
 
                         else:
-                            params = [d['name'] + '=' + d['type'] for d in data['paths'][path][method]['parameters']]
+                            params = [d['name'] + '=' + parameters[0]['type'] for d in parameters]
                             rams = [
-                                re.sub('=.*?$', '=100000000', k) if re.findall('.*?id=.*?', k, flags=re.IGNORECASE) else k
-                                for k in params]
+                                re.sub('=.*?$', '=100000000', k) if re.findall('.*?id=.*?', k, flags=re.IGNORECASE)
+                                else k for k in params]
                             payload = dict(i.split('=') for i in rams)
                             path_without_curly = re.sub(r'(\{.*?})', '1', path)
 
@@ -219,7 +219,6 @@ def open_endpoints_scrapper():
                                           Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
                                           'curl -X', method.upper(), Fore.YELLOW+ url + path_without_curly + Style.RESET_ALL
                                           )
-
 
                 # Handle paths with request body only
                 elif 'requestBody' in num_of_requests:
@@ -323,8 +322,6 @@ def open_endpoints_scrapper():
                                                                           str(res) + '\''
                                                                           )
 
-
-
             all_other_endpoints()
 
             # Handle endpoints without params or request body
@@ -349,7 +346,7 @@ def open_endpoints_scrapper():
                                 print(Fore.CYAN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
                                       Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
                                       'curl ' + '-X ' + method.upper(),
-                                      Fore.YELLOW + url +path_without_curly + Style.RESET_ALL
+                                      Fore.YELLOW + url + path_without_curly + Style.RESET_ALL
                                       )
 
             endpoints_without_params_nor_reqbody()
