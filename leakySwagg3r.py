@@ -8,7 +8,7 @@ from ratelimit import limits, sleep_and_retry
 
 endpoint = sys.argv[1]
 
-print(Fore.GREEN +
+print(Fore.BLUE +
       '******************************************************************************************\n'
       'Dear User, Thank you for using LeakySwagg3r ...\n'
       'This tool is meant for educational/pentest exercise by authorized person(s) only!\n'+
