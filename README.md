@@ -1,5 +1,4 @@
 # LeakySwagg3r
-A Python tool to find misconfigured/unauthenticated Swagger API endpoints
 =======
 # Warning:
 -----------------------------------------------------------------------------------------------------
