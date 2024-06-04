@@ -2,6 +2,7 @@
 # Warning:
 ***This tool is meant for educational/pentest exercise by authorized person(s) only!
 As such, only use this tool if you are legally authorized to test a target***  
+
 ***[Warning]:***
 
 ***Before running the script, It is advisable to modify the allowed methods in the script first! i.e You may want to remove DELETE when testing production environments***
