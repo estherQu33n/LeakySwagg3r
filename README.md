@@ -8,7 +8,6 @@ As such, only use this tool if you are legally authorized to test a target***
 ***Before running this script, it is advisable to modify the allowed methods within the script first! i.e You may want to remove the DELETE method when testing a target in production environment!***
 
 # The developer of this tool will NOT be held liable in case of any misuse of this tool!
------------------------------------------------------------
 
 
 SETUP:
