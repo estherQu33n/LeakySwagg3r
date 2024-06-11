@@ -126,10 +126,8 @@ def supported_schema():
                         else d['name'] + '=' + str(list(parameters[0]['schema'].keys())[0])
                         for d in parameters]
 
-                    # format endpoints with ID parameter
-                    # Default set to 100000000 to avoid accidentally tampering with an endpoint in PROD
-                    # Imagine sending delete request to userID=1 where the user exists????
-                    rams = [re.sub('=.*?$', '=100000000', k) if re.findall('.*?id=.*?', k, flags=re.IGNORECASE) else k
+                    # format endpoints with ID parameter, default set to 1
+                    rams = [re.sub('=.*?$', '=1', k) if re.findall('.*?id=.*?', k, flags=re.IGNORECASE) else k
                             for k
                             in params]
                     payload = dict(i.split('=') for i in rams)
@@ -263,7 +261,7 @@ def supported_schema():
                                 'schema']
                             else d['name'] + '=' + str(list(parameters[0]['schema'].keys())[0])
                                       for d in parameters]
-                            rams = [re.sub('=.*?$', '=100000000', k) if
+                            rams = [re.sub('=.*?$', '=1', k) if
                                     re.findall('.*?id=.*?', k, flags=re.IGNORECASE) else
                                     k for k in params]
 
@@ -293,7 +291,7 @@ def supported_schema():
                         elif 'type' in parameters[0]:
                             params = [d['name'] + '=' + parameters[0]['type'] for d in parameters]
                             rams = [
-                                re.sub('=.*?$', '=100000000', k) if re.findall('.*?id=.*?', k, flags=re.IGNORECASE)
+                                re.sub('=.*?$', '=1', k) if re.findall('.*?id=.*?', k, flags=re.IGNORECASE)
                                 else k for k in params]
                             payload = dict(i.split('=') for i in rams)
                             path_without_curly = format_path()
@@ -320,7 +318,7 @@ def supported_schema():
                         else:
                             params = [d['name'] + '=' + parameters[0]['name'] for d in parameters]
                             rams = [
-                                re.sub('=.*?$', '=100000000', k) if re.findall('.*?id=.*?', k, flags=re.IGNORECASE)
+                                re.sub('=.*?$', '=1', k) if re.findall('.*?id=.*?', k, flags=re.IGNORECASE)
                                 else k for k in params]
                             payload = dict(i.split('=') for i in rams)
                             path_without_curly = format_path()
