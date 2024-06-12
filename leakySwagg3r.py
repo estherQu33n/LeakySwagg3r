@@ -153,12 +153,14 @@ def supported_schema():
 
                                             unauthorized = re.findall('^unauthorized.*true$', response.text,
                                                                       flags=re.IGNORECASE)
+                                            size = len(response.content)
                                             if 200 >= response.status_code < 300 or response.status_code == 404:
                                                 if unauthorized:
                                                     pass
                                                 else:
                                                     print(Fore.GREEN + 'Potentially Unauthenticated:', Style.RESET_ALL,
                                                           Fore.RED, response.status_code, Style.RESET_ALL,
+                                                         Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL,
                                                           '\n', 'curl ' + '-X', method.upper(),
                                                           Fore.YELLOW + url + path_without_curly + Style.RESET_ALL,
                                                           '-H', '\'Content-Type: ' + form + '\'', '-d',
@@ -179,12 +181,14 @@ def supported_schema():
 
                                     unauthorized = re.findall('^unauthorized.*true$', response.text,
                                                               flags=re.IGNORECASE)
+                                    size = len(response.content)
                                     if 200 >= response.status_code < 300 or response.status_code == 404:
                                         if unauthorized:
                                             pass
                                         else:
                                             print(Fore.GREEN + 'Potentially Unauthenticated:', Style.RESET_ALL,
                                                   Fore.RED, response.status_code, Style.RESET_ALL,
+                                                 Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL,
                                                   '\n', 'curl ' + '-X', method.upper(),
                                                   Fore.YELLOW + url + path_without_curly + Style.RESET_ALL,
                                                   '-H', '\'Content-Type: ' + form + '\'', '-d',
@@ -232,13 +236,15 @@ def supported_schema():
                                                     unauthorized = re.findall('^unauthorized.*true$',
                                                                               response.text,
                                                                               flags=re.IGNORECASE)
+                                                    size = len(response.content)
 
                                                     if 200 >= response.status_code < 300 or response.status_code == 404:
                                                         if unauthorized:
                                                             pass
                                                         else:
                                                             print(Fore.GREEN + 'Potentially Unauthenticated:', Style.RESET_ALL +
-                                                                  Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
+                                                                  Fore.RED + str(response.status_code) + Style.RESET_ALL,
+                                                                 Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL, '\n',
                                                                   'curl','-X', method.upper(), Fore.YELLOW + url +
                                                                   path_without_curly + '?' +
                                                                   '&'.join(rams).replace("integer","1").replace(
@@ -276,12 +282,14 @@ def supported_schema():
                                     response = httpx.request(timeout=timeout, url=url + path_without_curly, method=method,
                                                              params=payload)
                                 unauthorized = re.findall('^unauthorized.*true$', response.text, flags=re.IGNORECASE)
+                                size = len(response.content)
                                 if 200 >= response.status_code < 300 or response.status_code == 404:
                                     if unauthorized:
                                         pass
                                     else:
                                         print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
-                                              Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
+                                              Fore.RED + str(response.status_code) + Style.RESET_ALL,
+                                             Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL, '\n',
                                               'curl -X', method.upper(), Fore.YELLOW + url +
                                               path_without_curly + '?' +
                                               '&'.join(rams).replace("integer", "1").replace("boolean", "True") +
@@ -304,12 +312,14 @@ def supported_schema():
                                     response = httpx.request(timeout=timeout, url=url + path_without_curly, method=method, params=payload)
 
                                 unauthorized = re.findall('^unauthorized.*true$', response.text, flags=re.IGNORECASE)
+                                size = len(response.content)
                                 if 200 >= response.status_code < 300 or response.status_code == 404:
                                     if unauthorized:
                                         pass
                                     else:
                                         print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
-                                              Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
+                                              Fore.RED + str(response.status_code) + Style.RESET_ALL,
+                                             Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL, '\n',
                                               'curl -X', method.upper(), Fore.YELLOW + url + path_without_curly + '?' +
                                               '&'.join(rams).replace("integer", "1").replace("boolean", "True") +
                                               Style.RESET_ALL
@@ -332,12 +342,14 @@ def supported_schema():
                                                              params=payload)
 
                                 unauthorized = re.findall('^unauthorized.*true$', response.text, flags=re.IGNORECASE)
+                                size = len(response.content)
                                 if 200 >= response.status_code < 300 or response.status_code == 404:
                                     if unauthorized:
                                         pass
                                     else:
                                         print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
-                                              Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
+                                              Fore.RED + str(response.status_code) + Style.RESET_ALL,
+                                             Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL, '\n',
                                               'curl -X', method.upper(), Fore.YELLOW + url + path_without_curly + '?' +
                                               '&'.join(rams).replace("integer", "1").replace("boolean", "True") +
                                               Style.RESET_ALL
@@ -354,12 +366,14 @@ def supported_schema():
                                                          method=method)
 
                             unauthorized = re.findall('^unauthorized.*true$', response.text, flags=re.IGNORECASE)
+                            size = len(response.content)
                             if 200 >= response.status_code < 300 or response.status_code == 404:
                                 if unauthorized:
                                     pass
                                 else:
                                     print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
-                                          Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
+                                          Fore.RED + str(response.status_code) + Style.RESET_ALL,
+                                         Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL, '\n',
                                           'curl -X', method.upper(),
                                           Fore.YELLOW + url + path_without_curly + Style.RESET_ALL
                                           )
@@ -387,12 +401,14 @@ def supported_schema():
 
                                             unauthorized = re.findall('^unauthorized.*true$', response.text,
                                                                       flags=re.IGNORECASE)
+                                            size = len(response.content)
                                             if 200 >= response.status_code < 300 or response.status_code == 404:
                                                 if unauthorized:
                                                     pass
                                                 else:
                                                     print(Fore.GREEN + 'Potentially Unauthenticated:', Style.RESET_ALL,
                                                           Fore.RED, response.status_code, Style.RESET_ALL,
+                                                         Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL,
                                                           '\n', 'curl ' + '-X', method.upper(),
                                                           Fore.YELLOW + url + path_without_curly + Style.RESET_ALL,
                                                           '-H', '\'Content-Type: ' + form + '\'', '-d',
@@ -412,12 +428,14 @@ def supported_schema():
 
                                     unauthorized = re.findall('^unauthorized.*true$', response.text,
                                                               flags=re.IGNORECASE)
+                                    size = len(response.content)
                                     if 200 >= response.status_code < 300 or response.status_code == 404:
                                         if unauthorized:
                                             pass
                                         else:
                                             print(Fore.GREEN + 'Potentially Unauthenticated:', Style.RESET_ALL,
                                                   Fore.RED, response.status_code, Style.RESET_ALL,
+                                                 Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL,
                                                   '\n', 'curl ' + '-X', method.upper(),
                                                   Fore.YELLOW + url + path_without_curly + Style.RESET_ALL,
                                                   '-H', '\'Content-Type: ' + form + '\'', '-d',
@@ -462,6 +480,7 @@ def supported_schema():
                                                         unauthorized = re.findall('^unauthorized.*true$',
                                                                                   response.text,
                                                                                   flags=re.IGNORECASE)
+                                                        size = len(response.content)
 
                                                         if 200 >= response.status_code < 300 or response.status_code == 404:
                                                             if unauthorized:
@@ -469,8 +488,8 @@ def supported_schema():
                                                             else:
                                                                 print(Fore.GREEN + 'Potentially Unauthenticated:',
                                                                       Style.RESET_ALL,
-                                                                      Fore.RED, response.status_code,
-                                                                      Style.RESET_ALL, '\n',
+                                                                      Fore.RED, response.status_code,Style.RESET_ALL,
+                                                                     Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL, '\n',
                                                                       'curl', '-X', method.upper(),
                                                                       Fore.YELLOW + url + path_without_curly + Style.RESET_ALL,
                                                                       '-H', '\'Content-Type: ' + form + '\'', '-d',
@@ -489,15 +508,15 @@ def supported_schema():
                                                         unauthorized = re.findall('^unauthorized.*true$',
                                                                                   response.text,
                                                                                   flags=re.IGNORECASE)
-
+                                                        size = len(response.content)
                                                         if 200 >= response.status_code < 300 or response.status_code == 404:
                                                             if unauthorized:
                                                                 pass
                                                             else:
                                                                 print(Fore.GREEN + 'Potentially Unauthenticated:',
                                                                       Style.RESET_ALL,
-                                                                      Fore.RED, response.status_code,
-                                                                      Style.RESET_ALL, '\n',
+                                                                      Fore.RED, response.status_code,Style.RESET_ALL,
+                                                                     Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL, '\n',
                                                                       'curl ' + '-X', method.upper(),
                                                                       Fore.YELLOW + url + path_without_curly + Style.RESET_ALL,
                                                                       '-H', '\'Content-Type: ' + form + '\'', '-d',
@@ -525,13 +544,15 @@ def supported_schema():
 
                         unauthorized = re.findall('^unauthorized.*true$', response.text,
                                                   flags=re.IGNORECASE)
+                        size = len(response.content)
 
                         if 200 >= response.status_code < 300 or response.status_code == 404:
                             if unauthorized:
                                 pass
                             else:
                                 print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
-                                      Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
+                                      Fore.RED + str(response.status_code) + Style.RESET_ALL,
+                                     Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL, '\n',
                                       'curl ' + '-X ' + method.upper(),
                                       Fore.YELLOW + url + path_without_curly + Style.RESET_ALL
                                       )
@@ -565,12 +586,14 @@ def unsupported_schema():
                 else:
                     response = httpx.request(timeout=timeout, url=url + path_without_curly, method=method)
                 unauthorized = re.findall('^unauthorized.*true$', response.text, flags=re.IGNORECASE)
+                size = len(response.content)
                 if 200 >= response.status_code < 300 or response.status_code == 404:
                     if unauthorized:
                         pass
                     else:
                         print(Fore.GREEN + 'Potentially Unauthenticated:' + Style.RESET_ALL,
-                              Fore.RED + str(response.status_code) + Style.RESET_ALL, '\n',
+                              Fore.RED + str(response.status_code) + Style.RESET_ALL,
+                             Fore.CYAN + str(size) + '-Bytes' + Style.RESET_ALL, '\n',
                               'curl -X', method.upper(), Fore.YELLOW + url +
                               path_without_curly + Style.RESET_ALL
                               )
