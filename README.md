@@ -61,7 +61,8 @@ P/S: ***The specified endpoint must contain Swagger schema in json format***
 
 
 # Sample Output:
-![swagg3r](https://github.com/3sth3rN00n/LeakySwagg3r/assets/171611980/1210883d-a364-4160-8911-2ce33b991f5d)
+![swagg3r](https://github.com/estherQu33n/LeakySwagg3r/assets/171611980/a2970db2-2826-4ed2-8795-0da8e9427080)
+
 
 
 
